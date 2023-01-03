@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Course</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+  <h1 class="text-center mb-5">Edit Request</h1>
+  <form method="post" action="/budgetrequest/edit" th:object="${budgetRequest}" th:action="@{/budgetrequest/edit/{id}(id=${budgetRequest.id})}">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="form-group">
+      <label for="lengthOfStay">Length of Stay</label>
+      <input type="text" class="form-control" id="lengthOfStay" name="lengthOfStay" th:field="*{lengthOfStay}">
+    </div>
+    <div class="form-group">
+      <label for="costOfBond">Cost of Bond</label>
+      <input type="text" class="form-control" id="costOfBond" name="costOfBond" th:field="*{costOfBond}">
+    </div>
+    <div class="form-group">
+      <label for="nameRequest">Name of Request</label>
+      <input type="text" class="form-control" id="nameRequest" name="nameRequest" th:field="*{nameRequest}">
+    </div>
+    <div class="form-group">
+      <label for="requestDetails">Request Details</label>
+      <textarea id="requestDetails" name="requestDetails" rows="10" cols="70" th:field="*{requestDetails}"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>
