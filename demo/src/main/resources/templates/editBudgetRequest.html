@@ -2,32 +2,33 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Edit Course</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>Edit Request</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-<div class="container mt-5">
-  <h1 class="text-center mb-5">Edit Request</h1>
-  <form method="post" action="/budgetrequest/edit" th:object="${budgetRequest}" th:action="@{/budgetrequest/edit/{id}(id=${budgetRequest.id})}">
-    <input type="hidden" name="_method" value="PUT">
-    <div class="form-group">
-      <label for="lengthOfStay">Length of Stay</label>
-      <input type="text" class="form-control" id="lengthOfStay" name="lengthOfStay" th:field="*{lengthOfStay}">
+<body class="bg-gray-100 h-screen font-sans">
+<div class="container mx-auto mt-5">
+  <h1 class="text-center mb-5 font-bold text-3xl">Edit Request</h1>
+  <form method="post" action="/budgetrequest/edit" th:object="${budgetrequest}" th:action="@{/budgetrequest/edit/{id}(id=${budgetrequest.id})}">
+    <input type="hidden" th:field="*{id}"/>
+    <div class="mb-5">
+      <label class="block font-bold mb-2 text-lg" for="lengthOfStay">Length of Stay</label>
+      <input class="border rounded w-full py-2 px-3" id="lengthOfStay" type="text" th:field="*{lengthOfStay}" placeholder="Length of Stay">
     </div>
-    <div class="form-group">
-      <label for="costOfBond">Cost of Bond</label>
-      <input type="text" class="form-control" id="costOfBond" name="costOfBond" th:field="*{costOfBond}">
+    <div class="mb-5">
+      <label class="block font-bold mb-2 text-lg" for="costOfBond">Cost of Bond</label>
+      <input class="border rounded w-full py-2 px-3" id="costOfBond" type="text" th:field="*{costOfBond}" placeholder="Cost of Bond">
     </div>
-    <div class="form-group">
-      <label for="nameRequest">Name of Request</label>
-      <input type="text" class="form-control" id="nameRequest" name="nameRequest" th:field="*{nameRequest}">
+    <div class="mb-5">
+      <label class="block font-bold mb-2 text-lg" for="nameRequest">Name of Request</label>
+      <input class="border rounded w-full py-2 px-3" id="nameRequest" type="text" th:field="*{nameRequest}" placeholder="Name of Request">
     </div>
-    <div class="form-group">
-      <label for="requestDetails">Request Details</label>
-      <textarea id="requestDetails" name="requestDetails" rows="10" cols="70" th:field="*{requestDetails}"></textarea>
+    <div class="mb-5">
+      <label class="inline-flex items-center" for="requestDetails">Request Details</label>
+        <textarea id="requestDetails" name="requestDetails" rows="10" cols="70" th:field="*{requestDetails}"></textarea>
     </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="text-center mt-5">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Save</button>
+    </div>
   </form>
 </div>
 </body>

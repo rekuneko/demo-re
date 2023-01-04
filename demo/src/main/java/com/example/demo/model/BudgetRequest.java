@@ -16,7 +16,7 @@ public class BudgetRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private int budgetRequestId;
+    private int id;
 
     @Column(name = "length_of_stay", nullable = false)
     private String lengthOfStay;

@@ -55,7 +55,7 @@ public class BudgetRequestController {
 
     @PostMapping("/edit/{id}")
     public String edit(@PathVariable int id, @ModelAttribute BudgetRequest budgetRequest) {
-        budgetRequest.setBudgetRequestId(id);
+        budgetRequest.setId(id);
         budgetRequestService.save(budgetRequest);
         return "redirect:/budgetrequest";
     }
