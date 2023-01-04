@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package biz.global77.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

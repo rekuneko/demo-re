@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package biz.global77.service;
 
-import com.example.demo.model.BudgetRequest;
-import com.example.demo.repository.BudgetRepository;
+import biz.global77.model.BudgetRequest;
+import biz.global77.repository.BudgetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package biz.global77.service;
 
-import com.example.demo.model.BudgetRequest;
+import biz.global77.model.BudgetRequest;
 
 import java.util.List;
 

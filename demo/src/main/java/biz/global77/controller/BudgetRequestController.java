@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package biz.global77.controller;
 
-import com.example.demo.model.BudgetRequest;
-import com.example.demo.service.BudgetRequestService;
+import biz.global77.model.BudgetRequest;
+import biz.global77.service.BudgetRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
